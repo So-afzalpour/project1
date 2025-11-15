@@ -1,24 +1,142 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h2>HTML Forms</h2>
-
-<form action="/action_page.php" style="background-color: brown;" >
+<!DOCTYPE html><html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>رزومه من</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
 <style>
-    body {
-        background-color: rgb(190, 17, 162);
-}        
+body{font-size:0.9rem;}
+.container{max-width:900px;}
+.carousel-item img{height:350px;object-fit:cover;}
 </style>
-    <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-  <label for=""></label>
-</form> 
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">رزومه من</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">درباره من</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">مهارت‌ها</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">پروژه‌ها</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">تماس</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav><!-- Carousel -->
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://picsum.photos/1200/400?1" class="d-block w-100" />
+            <div class="carousel-caption d-none d-md-block">
+                <h5>به رزومه من خوش آمدید</h5>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://picsum.photos/1200/400?2" class="d-block w-100" />
+        </div>
+        <div class="carousel-item">
+            <img src="https://picsum.photos/1200/400?3" class="d-block w-100" />
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+<!-- About Section -->
+<section id="about" class="container py-5">
+    <h2 class="mb-4">درباره من</h2>
+    <p>من یک توسعه‌دهنده وب هستم که با تکنولوژی‌های گوناگون کار می‌کنم.</p>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aboutModal">اطلاعات بیشتر</button>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">اطلاعات بیشتر</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>اینجا می‌توانید توضیحات بیشتر درباره من را مشاهده کنید.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Skills Section -->
+<section id="skills" class="container py-5">
+    <h2 class="mb-4">مهارت‌ها</h2>
+    <div class="mb-3">
+        <label>HTML</label>
+        <div class="progress">
+            <div class="progress-bar" style="width: 90%">90%</div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label>CSS</label>
+        <div class="progress">
+            <div class="progress-bar bg-success" style="width: 80%">80%</div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label>JavaScript</label>
+        <div class="progress">
+            <div class="progress-bar bg-warning" style="width: 70%">70%</div>
+        </div>
+    </div>
+</section>
+
+<!-- Cards Section -->
+<section id="projects" class="container py-5">
+    <h2 class="mb-4">پروژه‌ها</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://picsum.photos/400/200?1" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">پروژه ۱</h5>
+                    <p class="card-text">توضیح کوتاه درباره پروژه.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://picsum.photos/400/200?2" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">پروژه ۲</h5>
+                    <p class="card-text">توضیح کوتاه درباره پروژه.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://picsum.photos/400/200?3" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">پروژه ۳</h5>
+                    <p class="card-text">توضیح کوتاه درباره پروژه.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="container py-5">
+    <h2 class="mb-4">تماس با من</h2>
+    <p>ایمیل: <a href="soheilafzalpour@gmail.com">soheilafzalpour@gmail.com</a></p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
